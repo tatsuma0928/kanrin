@@ -31,6 +31,12 @@
     <td>{{$val->description}}</td>
     <td>{{$val->created_at}}</td>
     <td>{{$val->updated_at}}</td>
+    <td><form action="/holiday" method="post">
+            <input type="hidden" name="id" value="{{$val->id}}">
+            {{ method_field('delete') }}
+            {{csrf_field()}} 
+            <button class="btn btn-default" type="submit">Delete</button>
+    </form></td>
     </tr>
     @endforeach
     </tbody>
