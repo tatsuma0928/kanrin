@@ -14,6 +14,15 @@
     <button type="submit" class="btn btn-primary">登録</button> 
     <input type="hidden" name="id" value="{{$data->id}}">
     </form>  
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <!-- 休日一覧表示 -->
     <table class="table">
     <thead>

@@ -27,6 +27,11 @@ class CalendarController extends Controller
     }
     public function postHoliday(Request $request)
     {
+        $validatedData = $request->validate([
+            'day' => 'required|date_format:Y-m-d',
+            'description' => 'required',
+        ]);
+        
         // POSTで受信した休日データの登録
         if (isset($request->id)) {
             $holiday = Holiday::where('id', '=', $request->id)->first();
