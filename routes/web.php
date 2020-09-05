@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/holiday','CalendarController@getHoliday');
 Route::post('/holiday','CalendarController@postHoliday');
 Route::get('/','CalendarController@index');
+Route::get('/holiday/{id}','CalendarController@getHolidayId');
