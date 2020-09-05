@@ -21,18 +21,32 @@ class Calendar
         $lastDay = date("t", mktime(0, 0, 0, $month, 1, $year)); // 指定した月の最終日
         // 日曜日からカレンダーを表示するため前月の余った日付をループの初期値にする
         $day = 1 - $firstWeekDay;
+
+        // 前月
+        $prev = strtotime('-1 month',mktime(0, 0, 0, $month, 1, $year));
+        $prev_year = date("Y",$prev);
+        $prev_month = date("m",$prev);
+        // 翌月
+        $next = strtotime('+1 month',mktime(0, 0, 0, $month, 1, $year));
+        $next_year = date("Y",$next);
+        $next_month = date("m",$next);
+
         $this->html = <<< EOS
-<h1>{$year}年{$month}月</h1>
-<table class="table table-bordered">
-<tr>
-  <th scope="col">日</th>
-  <th scope="col">月</th>
-  <th scope="col">火</th>
-  <th scope="col">水</th>
-  <th scope="col">木</th>
-  <th scope="col">金</th>
-  <th scope="col">土</th>
-</tr>
+        <h1>
+        <a class="btn btn-primary" href="/?year={$prev_year}&month={$prev_month}" role="button">&lt;前月</a>
+        {$year}年{$month}月
+        <a class="btn btn-primary" href="/?year={$next_year}&month={$next_month}" role="button">翌月&gt;</a>
+        </h1>
+        <table class="table table-bordered">
+        <tr>
+          <th scope="col">日</th>
+          <th scope="col">月</th>
+          <th scope="col">火</th>
+          <th scope="col">水</th>
+          <th scope="col">木</th>
+          <th scope="col">金</th>
+          <th scope="col">土</th>
+        </tr>
 EOS;
         // カレンダーの日付部分を生成する
         while ($day <= $lastDay) {
