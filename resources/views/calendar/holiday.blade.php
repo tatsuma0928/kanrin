@@ -36,10 +36,11 @@
     <tbody>
     @foreach($list as $val)
     <tr>
-    <th scope="row"><a href="{{ url('/holiday/'.$val->id) }}">{{$val->day}}</a></th>
+    <th>{{$val->day}}</th>
     <td>{{$val->description}}</td>
     <td>{{$val->created_at}}</td>
     <td>{{$val->updated_at}}</td>
+    <td scope="row"><a href="{{ url('/holiday/'.$val->id) }}">編集</a></td>
     <td><form action="/holiday" method="post">
             <input type="hidden" name="id" value="{{$val->id}}">
             {{ method_field('delete') }}
