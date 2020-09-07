@@ -1,6 +1,4 @@
-@extends('layout')
-@section('title', '予定設定')
-@section('content')
+
 <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -57,6 +55,10 @@
             @yield('content')
         </main>
     </div>
+@extends('layout')
+@section('title', '予定設定')
+@section('content')
+
     <h1>予定入力</h1>
     <!-- 休日入力フォーム -->
     <form method="POST" action="/holiday"> 
