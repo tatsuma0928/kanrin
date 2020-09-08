@@ -4498,12 +4498,15 @@ input[type=button].btn-block {
 }
 
 .navbar {
+  font-size: 20px;
+  height: 70px;
+  margin-bottom: 20px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 20px 1rem;
 }
 
 .navbar .container,
@@ -4519,6 +4522,7 @@ input[type=button].btn-block {
 }
 
 .navbar-brand {
+  font-size: 20px;
   display: inline-block;
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
@@ -4834,7 +4838,10 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  color: white;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4843,7 +4850,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -7044,7 +7051,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #4d4d4d !important;
 }
 
 .bg-transparent {
