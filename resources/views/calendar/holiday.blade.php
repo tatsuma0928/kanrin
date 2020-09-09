@@ -94,16 +94,17 @@
     <tbody>
     @foreach($list as $val)
     <tr>
-    <th scope="row"><a href="{{ url('/holiday/'.$val->id) }}">{{$val->day}}</a></th>
-    <td>{{$val->description}}</td>
-    <td>{{$val->created_at}}</td>
-    <td>{{$val->updated_at}}</td>
-    <td><form action="/holiday" method="post">
+    <th>{{$val->day}}</th>
+    <th>{{$val->description}}</th>
+    <th>{{$val->created_at}}</th>
+    <th>{{$val->updated_at}}</th>
+    <th scope="row"><a href="{{ url('/holiday/'.$val->id) }}">編集</a></th>
+    <th><form action="/holiday" method="post">
             <input type="hidden" name="id" value="{{$val->id}}">
             {{ method_field('delete') }}
             {{csrf_field()}} 
             <button class="btn btn-default" type="submit">Delete</button>
-    </form></td>
+    </form></th>
     </tr>
     @endforeach
     </tbody>
