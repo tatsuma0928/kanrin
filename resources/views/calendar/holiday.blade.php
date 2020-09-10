@@ -64,12 +64,12 @@
     <form method="POST" action="/holiday"> 
     <div class="form-group">
     {{csrf_field()}}    
-    <label for="day">日付 </label>
+    <label for="day" class="calendar-font">日付 </label>
     <input type="text" name="day" class="form-control" id="day" value="{{$data->day}}">
-    <label for="description">詳細</label>
+    <label for="description" class="calendar-font">詳細</label>
     <input type="text" name="description" class="form-control" id="description" value="{{$data->description}}"> 
     </div>
-    <button type="submit" class="btn btn-primary">登録</button> 
+    <button type="submit" class="btn btn-primary btn-lg">登録</button> 
     <input type="hidden" name="id" value="{{$data->id}}">
     </form>  
     @if ($errors->any())
@@ -109,7 +109,7 @@
     @endforeach
     </tbody>
     </table>
-    <a href="{{ url('/') }}">カレンダーに戻る</a>
+    <a href="{{ url('/') }}" class="calendar-btn">カレンダーへ</a>
     <script>
   $( function() {
     $( "#day" ).datepicker({dateFormat: 'yy-mm-dd'});
