@@ -62,7 +62,7 @@
     <h1>予定入力</h1>
     <!-- 休日入力フォーム -->
     <form method="POST" action="/holiday"> 
-    <div class="form-group">
+    <div class="calendar-group">
     {{csrf_field()}}    
     <label for="day" class="calendar-font">日付 </label>
     <input type="text" name="day" class="form-control" id="day" value="{{$data->day}}">

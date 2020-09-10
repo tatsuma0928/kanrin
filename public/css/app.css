@@ -4946,6 +4946,7 @@ input[type=button].btn-block {
 }
 
 .card {
+  height: 700px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4987,7 +4988,7 @@ input[type=button].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding-top: 120px;
 }
 
 .card-title {
@@ -5019,6 +5020,9 @@ input[type=button].btn-block {
 }
 
 .card-header:first-child {
+  height: 100px;
+  font-size: 25px;
+  line-height: 80px;
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
@@ -8310,7 +8314,7 @@ button.bg-dark:focus {
 }
 
 .shadow-sm {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
@@ -10930,8 +10934,11 @@ a.text-dark:focus {
   font-size: 20px;
 }
 .form-group {
-  height: 200px;
+  height: 80px;
 }
 .calendar-font{
   font-size: 20px;
+}
+.calendar-group {
+  height: 200px;
 }
