@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/jkanban.css": "/css/jkanban.css",
+    "/css/jkanban.min.css": "/css/jkanban.min.css",
+    "/js/jkanban.js": "/js/jkanban.js",
+    "/js/jkanban.min.js": "/js/jkanban.min.js"
 }

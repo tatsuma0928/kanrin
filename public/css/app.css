@@ -1795,11 +1795,14 @@ pre code {
 }
 
 .table-bordered {
+  height: 600px;
+  width: 1200px;
   border: 1px solid #dee2e6;
 }
 
 .table-bordered th,
 .table-bordered td {
+  width: 40px;
   border: 1px solid #dee2e6;
 }
 
@@ -2117,9 +2120,9 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: 50px;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
   color: #495057;
@@ -4498,12 +4501,15 @@ input[type=button].btn-block {
 }
 
 .navbar {
+  font-size: 20px;
+  height: 70px;
+  margin-bottom: 20px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 20px 1rem;
 }
 
 .navbar .container,
@@ -4519,6 +4525,7 @@ input[type=button].btn-block {
 }
 
 .navbar-brand {
+  font-size: 20px;
   display: inline-block;
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
@@ -4834,7 +4841,10 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  color: white;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4843,7 +4853,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -4936,6 +4946,7 @@ input[type=button].btn-block {
 }
 
 .card {
+  height: 700px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4977,7 +4988,7 @@ input[type=button].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding-top: 120px;
 }
 
 .card-title {
@@ -5009,6 +5020,9 @@ input[type=button].btn-block {
 }
 
 .card-header:first-child {
+  height: 100px;
+  font-size: 25px;
+  line-height: 80px;
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
@@ -7044,7 +7058,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #4d4d4d !important;
 }
 
 .bg-transparent {
@@ -8300,6 +8314,7 @@ button.bg-dark:focus {
 }
 
 .shadow-sm {
+  margin-bottom: 100px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
@@ -10904,3 +10919,26 @@ a.text-dark:focus {
   }
 }
 
+/* カレンダー修正 */
+
+.table tr td:nth-of-type(1) {
+  color: red;
+}
+.table tr td:nth-of-type(7) {
+  color: blue;
+}
+.todo-btn {
+  font-size: 20px;
+}
+.calendar-btn {
+  font-size: 20px;
+}
+.form-group {
+  height: 80px;
+}
+.calendar-font{
+  font-size: 20px;
+}
+.calendar-group {
+  height: 200px;
+}
