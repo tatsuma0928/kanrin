@@ -46,8 +46,6 @@
     <br />
     <button id="addToDo">Add element in "To Do" Board</button>
     <br />
-    <button id="removeBoard">Remove "Done" Board</button>
-    <br />
     <button id="removeElement">Remove "My Task Test"</button>
 
     <script src="../js/jkanban.js"></script>
@@ -60,15 +58,13 @@
           enabled: true,
         },
         click: function(el) {
-          console.log("Trigger on all items click!");
+
         },
         dropEl: function(el, target, source, sibling){
-          console.log(target.parentElement.getAttribute('data-id'));
-          console.log(el, target, source, sibling)
+  
         },
         buttonClick: function(el, boardId) {
-          console.log(el);
-          console.log(boardId);
+
           // create a form to enter element
           var formItem = document.createElement("form");
           formItem.setAttribute("class", "itemform");
@@ -92,57 +88,28 @@
         boards: [
           {
             id: "_todo",
-            title: "To Do (Can drop item only in working)",
+            title: "To Do",
             class: "info,good",
             dragTo: ["_working"],
             item: [
-              {
-                id: "_test_delete",
-                title: "Try drag this (Look the console)",
-                drag: function(el, source) {
-                  console.log("START DRAG: " + el.dataset.eid);
-                },
-                dragend: function(el) {
-                  console.log("END DRAG: " + el.dataset.eid);
-                },
-                drop: function(el) {
-                  console.log("DROPPED: " + el.dataset.eid);
-                }
-              },
-              {
-                title: "Try Click This!",
-                click: function(el) {
-                  alert("click");
-                },
-                class: ["peppe", "bello"]
-              }
+
             ]
           },
           {
             id: "_working",
-            title: "Working (Try drag me too)",
+            title: "Working ",
             class: "warning",
             item: [
-              {
-                title: "Do Something!"
-              },
-              {
-                title: "Run?"
-              }
+        
             ]
           },
           {
             id: "_done",
-            title: "Done (Can drop item only in working)",
+            title: "Done ",
             class: "success",
             dragTo: ["_working"],
             item: [
-              {
-                title: "All right"
-              },
-              {
-                title: "Ok!"
-              }
+              
             ]
           }
         ]
