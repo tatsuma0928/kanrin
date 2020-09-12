@@ -50,13 +50,13 @@ class CalendarController extends Controller
         return view('calendar.holiday', ['list' => $list, 'data' => $data]);
     }
 
-    public function index(Request $request)
+    public function show(Request $request)
     {
         $list = Holiday::all();
         $cal = new Calendar($list);
         $tag = $cal->showCalendarTag($request->month,$request->year);
 
-        return view('calendar.index', ['cal_tag' => $tag]);
+        return view('calendar.show', ['cal_tag' => $tag]);
     }
 
     public function deleteHoliday(Request $request)

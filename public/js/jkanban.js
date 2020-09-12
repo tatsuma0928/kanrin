@@ -330,6 +330,8 @@ module.exports = g;
           var board = self.element.querySelector('[data-id="' + boardID + '"] .kanban-drag');
           var nodeItem = document.createElement("div");
           nodeItem.classList.add("kanban-item");
+          nodeItem.setAttribute("id","removeBoard");
+
 
           if (typeof element.id !== "undefined" && element.id !== "") {
             nodeItem.setAttribute("data-eid", element.id);
@@ -453,6 +455,7 @@ module.exports = g;
               var itemKanban = board.item[itemkey];
               var nodeItem = document.createElement("div");
               nodeItem.classList.add("kanban-item");
+              nodeItem.setAttribute("id","removeBoard");
 
               if (itemKanban.id) {
                 nodeItem.dataset.eid = itemKanban.id;

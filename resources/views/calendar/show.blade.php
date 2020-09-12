@@ -58,5 +58,5 @@
 @section('title', 'カレンダー')
 @section('content')
     {!!$cal_tag!!}
-    <a href="{{ url('/holiday') }}" class="todo-btn">予定入力へ</a>
+    <a href="{{ url('/') }}" class="todo-btn">Todoリストへ</a>
 @endsection
