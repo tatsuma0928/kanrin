@@ -47,11 +47,13 @@
 }
 
 .kanban-board header .kanban-title-button {
+  font-size: 30px;
+  line-height: 13px;
   float: right;
 }
 
 .kanban-board .kanban-drag {
-  min-height: 200px;
+  min-height: 400px;
   padding: 20px;
 }
 
@@ -62,6 +64,7 @@
 }
 
 .kanban-item {
+  font-size: 20px;
   background: #fff;
   padding: 15px;
   margin-bottom: 20px;
@@ -73,6 +76,7 @@
 }
 
 .kanban-item:last-child {
+  font-size: 18px;
   margin: 0;
 }
 
@@ -110,7 +114,7 @@
   height: 24px;
   position: relative;
   float: left;
-  top: -3px;
+  top: 3px;
   margin-right: 4px;
 }
 

@@ -17,8 +17,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => ['auth']], function(){
+Route::get('/','Todocontroller@index');
 Route::get('/holiday','CalendarController@getHoliday');
 Route::post('/holiday','CalendarController@postHoliday');
-Route::get('/','CalendarController@index');
+Route::get('/show','CalendarController@show');
 Route::get('/holiday/{id}','CalendarController@getHolidayId');
 Route::delete('/holiday','CalendarController@deleteHoliday');
+});

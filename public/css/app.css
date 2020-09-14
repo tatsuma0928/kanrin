@@ -10942,3 +10942,7 @@ a.text-dark:focus {
 .calendar-group {
   height: 200px;
 }
+.btn-delete {
+  color: red;
+  font-size: 15px;
+}

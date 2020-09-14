@@ -98,18 +98,18 @@
     <th>{{$val->description}}</th>
     <th>{{$val->created_at}}</th>
     <th>{{$val->updated_at}}</th>
-    <th scope="row"><a href="{{ url('/holiday/'.$val->id) }}">編集</a></th>
+    <th><a href="{{ url('/holiday/'.$val->id) }}">編集</a></th>
     <th><form action="/holiday" method="post">
             <input type="hidden" name="id" value="{{$val->id}}">
             {{ method_field('delete') }}
             {{csrf_field()}} 
-            <button class="btn btn-default" type="submit">Delete</button>
+            <button class="btn btn-delete" type="submit">削除</button>
     </form></th>
     </tr>
     @endforeach
     </tbody>
     </table>
-    <a href="{{ url('/') }}" class="calendar-btn">カレンダーへ</a>
+    <a href="{{ url('/show') }}" class="calendar-btn">カレンダーへ</a>
     <script>
   $( function() {
     $( "#day" ).datepicker({dateFormat: 'yy-mm-dd'});
